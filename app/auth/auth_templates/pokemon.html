@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 style="margin-top: 100px;">Choose a pokemon</h3>
+<div style="display: block; margin: auto; width: 50%;">
+    <form method="POST" class="col-5" style="display: block; margin: auto;">
+    {{ form.hidden_tag() }}
+        {{ form.pokemon(class='form-control', placeholder='Enter the name of a Pokemon') }}
+    </form>
+</div>
+
+{% endblock %}

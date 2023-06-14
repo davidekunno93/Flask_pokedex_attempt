@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>Favorites</head>
+
+<body>
+    <nav>
+
+    </nav>
+    <p>Here are some favorites </p>
+    <div style="display: flex; flex-direction: row;">
+        <div>
+            <p>Artist:</p>
+            <p>Actor:</p>
+            <p>Movie:</p>
+            <p>Sportsman:</p>
+            <p>TV Personality:</p>
+        </div>
+        {% for f in fav %}
+        <div style="border: 1px solid black; width: 200px; margin: 0px 20px;">
+            <p> {{ f.artist }} </p>
+            <p> {{ f.actor }} </p>
+            <p> {{ f.movie }} </p>
+            <p> {{ f.athlete }} </p>
+            <p> {{ f.tv_person }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login | Dark Web</title>
+    <link rel="stylesheet" href="../static/main.css" <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h6 style="text-align: center;">Created by {{ author }} </h6>
+    <div class="two-box">
+        <div class="box-1">
+            <h1 class="title">
+                Welcome | Flask Web
+            </h1>
+        </div>
+        <div class="box-2">
+            <div class="sign-in-box">
+                <h1 class="sign-in">Sign-in</h1>
+                
+                <label class="login-label" for="username">Username:</label>
+                <input class="login-box" type="text" placeholder="Username" name="username" id="username">
+                <label class="login-label" for="password">Password:</label>
+                <input class="login-box" type="text" placeholder="Password" name="password" id="password">
+                
+                <button class="login-button" onclick="location.href='fav'">LOG IN</button>
+            </div>
+        </div>
+    </div>
+    <h3 class="footer-title">Example usernames:</h3>
+    <div class="footer">
+        {% for log in logs %}
+            <div class="fake-users"> {{log.username}} </div>
+        {% endfor %}
+    </div>
+    <h3 class="footer-title">Example passwords:</h3>
+    <div class="footer">
+        {% for log in logs %}
+            <div class="fake-users"> {{log.password}} </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
