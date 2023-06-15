@@ -71,6 +71,16 @@ class Pokemon():
                 moves[move_name] = move_power
         return moves
 
+    def stats(self):
+        self.test_data()
+        data = self.test_data()
+        stats = {}
+        stats_list = data["stats"]
+        stats["hp"] = stats_list[0]["base_stat"]
+        stats["attack"] = stats_list[1]["base_stat"]
+        stats["defense"] = stats_list[2]["base_stat"]
+        return stats
+
     def pokedex(self):
         all_dict = {}
         print(self.pokemon_name())
@@ -78,6 +88,7 @@ class Pokemon():
         all_dict["sprite"] = self.sprite()
         all_dict["abilities"] = self.abilities()
         all_dict["moves"] = self.moves()
+        all_dict["stats"] = self.stats()
         return all_dict
         
 # MyChar = Pokemon("Charizard")
